@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMC Group | 理想を、具体的な「形」に。</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            background-color: #fff;
+            color: #000;
+            overflow-x: hidden;
+        }
+        .impact-font { font-family: 'Dela Gothic One', cursive; }
+        
+        /* カーソル追従する「かわいい玉」 */
+        #cursor {
+            width: 20px;
+            height: 20px;
+            background: rgba(16, 185, 129, 0.5);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 999;
+            transition: transform 0.1s ease;
+        }
+
+        /* 横スクロールする巨大テキスト */
+        .marquee {
+            font-size: 20vw;
+            white-space: nowrap;
+            display: flex;
+            color: #f8fafc;
+            line-height: 1;
+            user-select: none;
+        }
+
+        /* ノイズのような質感（高級感） */
+        .noise::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url(https://grainy-gradients.vercel.app/noise.svg);
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="noise">
+    <div id="cursor"></div>
+
+    <header class="fixed top-0 left-0 w-full p-8 flex justify-between items-start z-50 mix-blend-difference text-white">
+        <div class="impact-font text-4xl leading-none tracking-tighter">EMC<br>GROUP</div>
+        <div class="text-right">
+            <div class="text-xs font-black mb-2 uppercase tracking-widest">Navigation</div>
+            <nav class="flex flex-col gap-1 font-black text-lg">
+                <a href="#" class="hover:text-emerald-400">ABOUT</a>
+                <a href="#" class="hover:text-emerald-400">FRIENDS</a>
+                <a href="#" class="hover:text-emerald-400">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="min-h-screen flex flex-col justify-center px-8 relative">
+            <div class="marquee impact-font absolute top-1/2 -translate-y-1/2 -z-10 opacity-30">
+                HOSPITALITY HOSPITALITY HOSPITALITY
+            </div>
+            
+            <div class="hero-content">
+                <p class="text-xl md:text-2xl font-black mb-6 flex items-center gap-4">
+                    <span class="w-12 h-[2px] bg-black"></span> 理想を、具体的な「形」に。
+                </p>
+                <h1 class="impact-font text-7xl md:text-[12rem] leading-[0.9] mb-12">
+                    MAKE IT<br>
+                    <span class="text-emerald-500">AWESOME.</span>
+                </h1>
+                <div class="flex gap-8 items-center">
+                    <div class="w-20 h-20 rounded-full border-4 border-black flex items-center justify-center animate-bounce">
+                        <span class="text-2xl">↓</span>
+                    </div>
+                    <p class="font-black text-slate-400 max-w-xs uppercase text-xs">Scroll to explore our creative solutions for a better future.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="min-h-screen bg-black text-white px-8 py-32 flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="grid md:grid-cols-2 gap-20">
+                    <div class="reveal-box">
+                        <span class="text-emerald-500 impact-font text-2xl mb-4 block">01 / PRODUCTS</span>
+                        <h2 class="impact-font text-6xl md:text-8xl mb-10">TOWEL</h2>
+                        <p class="text-xl font-bold leading-relaxed text-slate-400">
+                            おもてなしの心を、一番身近な肌触りに変えて。
+                            EMCは多様化するニーズに応え、
+                            「心地よさ」の新しいスタンダードを作ります。
+                        </p>
+                    </div>
+                    <div class="reveal-box mt-20 md:mt-40">
+                        <span class="text-yellow-400 impact-font text-2xl mb-4 block">02 / ACTION</span>
+                        <h2 class="impact-font text-6xl md:text-8xl mb-10">FUTURE</h2>
+                        <p class="text-xl font-bold leading-relaxed text-slate-400">
+                            防災からSDGsまで。
+                            私たちは「守る」だけでなく、
+                            「育てる」循環型社会をデザインします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-60 px-8 text-center overflow-hidden">
+            <h2 class="impact-font text-[15vw] leading-none mb-20 opacity-10">FRIENDS</h2>
+            <div class="friends-container flex flex-wrap justify-center gap-12">
+                <div class="friend-circle w-32 h-32 rounded-full border-4 border-dashed border-black flex items-center justify-center text-4xl cursor-pointer hover:bg-emerald-400 hover:border-solid transition-all">
+                    🌱
+                </div>
+                <div class="friend-circle w-32 h-32 rounded-full border-4 border-dashed border-black flex items-center justify-center text-4xl cursor-pointer hover:bg-yellow-300 hover:border-solid transition-all">
+                    🤝
+                </div>
+                <div class="friend-circle w-32 h-32 rounded-full border-4 border-dashed border-black flex items-center justify-center text-3xl font-black cursor-pointer hover:bg-black hover:text-white hover:border-solid transition-all">
+                    YOU
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 1. カーソル追従アニメーション
+        const cursor = document.querySelector('#cursor');
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, { x: e.clientX - 10, y: e.clientY - 10, duration: 0.3 });
+        });
+
+        // 2. スクロールに合わせて背景文字が流れる (GSAP ScrollTrigger)
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to(".marquee", {
+            x: -500,
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1
+            }
+        });
+
+        // 3. セクションがふわっと現れる演出
+        const reveals = document.querySelectorAll('.reveal-box');
+        reveals.forEach((el) => {
+            gsap.from(el, {
+                y: 100,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 80%",
+                }
+            });
+        });
+
+        // 4. 友達セクションの「ぷるぷる」アニメーション
+        gsap.to(".friend-circle", {
+            y: -20,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            stagger: 0.2
+        });
+    </script>
+</body>
+</html>
