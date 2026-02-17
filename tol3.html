@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>取扱商品 | EMC GROUP</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="tol.css">
+
+    <style>
+        .text-emerald { color: var(--emerald); }
+        .bg-emerald { background-color: var(--emerald); }
+    </style>
+</head>
+<body class="noise">
+    <div id="cursor"></div>
+
+    <header class="fixed top-0 left-0 w-full p-8 flex justify-between items-start z-50 mix-blend-difference text-white">
+        <a href="tol.html" class="impact-font text-4xl leading-none tracking-tighter hover:opacity-70 transition-opacity">
+            EMC<br>GROUP
+        </a>
+        <nav class="flex flex-col gap-9 font-black text-lg text-right">
+            <a href="tol3.html" class="hover:text-emerald-400 transition-colors">取扱商品</a>
+            <a href="#" class="hover:text-emerald-400 transition-colors">新着情報</a>
+            <a href="#" class="hover:text-emerald-400 transition-colors">会社情報</a>
+        </nav>
+    </header>
+
+    <main class="pt-48"> 
+        <section class="px-8 mb-32 relative">
+            <div class="marquee impact-font absolute top-0 left-0 -z-10 opacity-5 uppercase select-none">
+                HOSPITALITY HOSPITALITY HOSPITALITY
+            </div>
+            
+            <div class="reveal-box">
+                <p class="text-xl md:text-2xl font-black mb-6 flex items-center gap-4">
+                    <span class="w-12 h-[3px] bg-black"></span> 理想を、具体的な「形」に。
+                </p>
+                <h2 class="impact-font text-[10vw] md:text-[8rem] leading-none uppercase">
+                    OUR <span class="text-emerald">PRODUCTS.</span>
+                </h2>
+            </div>
+        </section>
+
+        <section class="min-h-screen bg-black text-white px-8 py-32 rounded-t-[60px] shadow-[0_-30px_60px_rgba(0,0,0,0.4)] relative z-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="reveal-box mb-24">
+                    <span class="text-emerald impact-font text-3xl mb-4 block italic">01 / PRODUCTS</span>
+                    <h3 class="impact-font text-[10vw] md:text-[9rem] leading-none">TOWEL</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-24 items-center">
+                    <div class="reveal-box">
+                        <p class="text-3xl md:text-4xl font-black leading-tight mb-12">
+                            おもてなしの心を、<br>肌触りに変えて。
+                        </p>
+                        <p class="text-xl text-slate-400 mb-10 leading-relaxed">
+                            国産・海外産タオルの各種取扱いから<br>名入れ・オリジナルタオル制作、ギフト用の箱入れまで。
+                        </p>
+                        <a href="#" class="inline-block px-10 py-4 border-2 border-emerald text-emerald font-black hover:bg-emerald hover:text-black transition-all uppercase italic">View Catalog</a>
+                    </div>
+                    <div class="reveal-box rounded-3xl overflow-hidden group shadow-[20px_20px_0px_rgba(29,191,115,0.2)]">
+                        <img src="towel1111.png" alt="EMC取扱商品：タオル">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-40 px-8 relative z-10 bg-[#FFEFF4]">
+            <div class="max-w-7xl mx-auto">
+                <div class="reveal-box mb-32 text-center">
+                    <span class="text-emerald impact-font text-3xl mb-4 block italic">02 / ACTION</span>
+                    <h2 class="impact-font text-[10vw] md:text-[9rem]">FUTURE</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div class="reveal-box p-12 bg-white rounded-[50px] border-4 border-black shadow-[15px_15px_0px_rgba(0,0,0,1)] hover:-translate-y-2 transition-transform">
+                        <h4 class="impact-font text-5xl mb-8 text-black">防災用品</h4>
+                        <p class="font-black text-xl mb-10 text-gray-700">いざという時に、命を守る「形」を。</p>
+                        <p class="font-black text-xl mb-10 text-gray-700">信頼のラインナップ。</p>
+                        <p class="text-gray-400 font-bold italic tracking-widest">SAFETY FIRST</p>
+                    </div>
+
+                    <div class="reveal-box p-12 bg-[#E6F9F1] text-gray-800 rounded-[50px] border-4 border-black shadow-[15px_15px_0px_#10b981] hover:-translate-y-2 transition-transform">
+                        <h4 class="impact-font text-5xl mb-8 text-emerald">SDGs</h4>
+                        <p class="font-black text-xl mb-10 text-gray-600">環境にやさしい素材。</p>
+                        <p class="font-black text-xl mb-10 text-gray-600">持続可能な社会への責任ある選択。</p>
+                        <div class="flex gap-4">
+                            <span class="px-6 py-2 bg-white border-2 border-emerald text-emerald font-black italic rounded-full text-sm">ECO</span>
+                            <span class="px-6 py-2 bg-white border-2 border-emerald text-emerald font-black italic rounded-full text-sm">ETHICAL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-20 text-center bg-[#FFEFF4]">
+        <a href="tol.html" class="impact-font text-3xl hover:opacity-70 transition-opacity">EMC GROUP</a>
+    </footer>
+
+    <script>
+        const cursor = document.querySelector('#cursor');
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
+        });
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(".marquee", {
+            x: -1000,
+            scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 2 }
+        });
+        gsap.utils.toArray('.reveal-box').forEach(box => {
+            gsap.from(box, { y: 80, opacity: 0, duration: 1.5, ease: "expo.out", scrollTrigger: { trigger: box, start: "top 85%" } });
+        });
+    </script>
+</body>
+</html>
