@@ -11,27 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="tol.css">
-
-    <style>
-        .text-emerald { color: #1DBF73; }
-        .bg-emerald { background-color: #1DBF73; }
-    </style>
 </head>
-<body class="noise bg-[#FFEFF4]">
+<body class="noise">
     <div id="cursor"></div>
 
-    <div class="fixed inset-0 z-[-1] opacity-20 pointer-events-none mix-blend-multiply bg-center bg-cover" 
-         style="background-image: url('towel2222.png');">
-    </div>
-
     <header class="fixed top-0 left-0 w-full p-8 flex justify-between items-start z-50 mix-blend-difference text-white">
-        <a href="tol.html" class="impact-font text-4xl leading-none tracking-tighter hover:opacity-70 transition-opacity">
-            EMC<br>GROUP
-        </a>
+        <div class="impact-font text-4xl leading-none tracking-tighter">EMC<br>GROUP</div>
         <nav class="flex flex-col gap-1 font-black text-lg text-right">
-            <a href="tol3.html" class="hover:text-emerald-400">取扱商品</a>
-            <a href="tol4.html" class="hover:text-emerald-400">新着情報</a>
-            <a href="tol5.html" class="hover:text-emerald-400">お問い合わせ</a>
+            <a href="#" class="hover:text-emerald-400 underline decoration-2 underline-offset-4">ABOUT</a>
+            <a href="#" class="hover:text-emerald-400">FRIENDS</a>
+            <a href="#" class="hover:text-emerald-400">CONTACT</a>
         </nav>
     </header>
 
@@ -42,28 +31,27 @@
             </div>
             
             <div class="hero-content">
-                <p class="text-xl md:text-2xl font-black mb-6 flex items-center gap-4 text-gray-900">
+                <p class="text-xl md:text-2xl font-black mb-6 flex items-center gap-4">
                     <span class="w-12 h-[3px] bg-black"></span> 理想を、具体的な「形」に。
                 </p>
                 <h1 class="impact-font text-7xl md:text-[10rem] leading-[0.9] mb-12">
                     MAKE IT<br>
-                    <span class="text-emerald">AWESOME.</span>
+                    <span class="text-emerald-500">AWESOME.</span>
                 </h1>
-                
                 <div class="w-20 h-20 rounded-full border-4 border-black flex items-center justify-center animate-bounce bg-white shadow-[8px_8px_0px_rgba(0,0,0,1)]">
-                    <span class="text-2xl font-bold">↓</span>
+                    <span class="text-2xl">↓</span>
                 </div>
             </div>
         </section>
 
-        <section class="min-h-screen bg-black text-white px-8 py-32 rounded-t-[50px] shadow-[0_-20px_50px_rgba(0,0,0,0.1)] relative z-20">
+        <section class="min-h-screen bg-black text-white px-8 py-32 rounded-t-[50px] shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
             <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
                 <div class="reveal-box">
                     <span class="text-emerald-400 impact-font text-2xl mb-4 block">01 / PRODUCTS</span>
                     <h2 class="impact-font text-6xl md:text-8xl mb-10">TOWEL</h2>
-                    <p class="text-xl text-slate-400 mb-10 leading-relaxed">
-                        国産・海外産タオルの各種取扱いから、<br>
-                        名入れ・オリジナルタオル制作、ギフト用の箱入れまで。
+                    <p class="text-xl font-bold leading-relaxed text-slate-400">
+                        おもてなしの心を、肌触りに変えて。<br>
+                        新しいスタンダードを提案します。
                     </p>
                 </div>
                 <div class="reveal-box md:mt-40">
@@ -71,23 +59,21 @@
                     <h2 class="impact-font text-6xl md:text-8xl mb-10">FUTURE</h2>
                     <p class="text-xl font-bold leading-relaxed text-slate-400">
                         防災、SDGs、そしてその先へ。<br>
-                        私たちは「未来を守る」デザインを追求します。
+                        「守る」デザインを追求します。
                     </p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="p-20 text-center bg-[#FFEFF4] relative z-20">
-        <a href="tol.html" class="impact-font text-3xl hover:opacity-70 transition-opacity">EMC GROUP</a>
-    </footer>
-
     <script>
+        // カーソルがついてくる動き
         const cursor = document.querySelector('#cursor');
         window.addEventListener('mousemove', (e) => {
             gsap.to(cursor, { x: e.clientX - 12, y: e.clientY - 12, duration: 0.2 });
         });
 
+        // スクロールで文字が横に流れる動き
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(".marquee", {
             x: -800,
@@ -99,6 +85,7 @@
             }
         });
 
+        // 下からふわっと出てくる動き
         gsap.utils.toArray('.reveal-box').forEach(box => {
             gsap.from(box, {
                 y: 80, opacity: 0, duration: 1.2, ease: "power3.out",

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名古屋中郵便局様 事例紹介 | EMC GROUP</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="tol.css">
+
+    <style>
+        .text-emerald { color: #1DBF73; }
+        .bg-emerald { background-color: #1DBF73; }
+    </style>
+</head>
+<body class="noise bg-[#FFEFF4]">
+    <div id="cursor"></div>
+
+    <div class="fixed inset-0 z-[-1] opacity-10 pointer-events-none mix-blend-multiply bg-center bg-cover" 
+         style="background-image: url('towel2222.png');">
+    </div>
+
+    <header class="fixed top-0 left-0 w-full p-8 flex justify-between items-start z-50 mix-blend-difference text-white">
+        <a href="tol.html" class="impact-font text-4xl leading-none tracking-tighter hover:opacity-70 transition-opacity">
+            EMC<br>GROUP
+        </a>
+        <nav class="flex flex-col gap-1 font-black text-lg text-right">
+            <a href="tol3.html" class="hover:text-emerald-400">取扱商品</a>
+            <a href="tol4.html" class="hover:text-emerald-400">新着情報</a>
+            <a href="tol5.html" class="hover:text-emerald-400">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <main class="min-h-screen flex items-center justify-center p-8">
+        <div class="max-w-4xl w-full reveal-box mt-24">
+            <div class="rounded-[40px] border-8 border-white overflow-hidden shadow-2xl">
+                <img src="yuubin2.jpg" alt="名古屋中郵便局様" class="w-full h-auto">
+            </div>
+            
+            <p class="impact-font text-2xl mt-8 text-gray-900 text-center">
+                名古屋中郵便局様 <span class="text-emerald">CASE STUDY</span>
+            </p>
+        </div>
+    </main>
+
+    <script>
+        const cursor = document.querySelector('#cursor');
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, { x: e.clientX - 12, y: e.clientY - 12, duration: 0.2 });
+        });
+
+        // ふわっと出る動きだけ残す
+        gsap.from(".reveal-box", { y: 50, opacity: 0, duration: 1.2, ease: "power3.out" });
+    </script>
+</body>
+</html>

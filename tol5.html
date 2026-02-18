@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | EMC GROUP</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="tol.css">
+
+    <style>
+        .text-emerald { color: #1DBF73; }
+        .bg-emerald { background-color: #1DBF73; }
+        .border-emerald { border-color: #1DBF73; }
+        input, textarea { background-color: #1a1a1a; border: 2px solid #333; transition: border-color 0.3s; }
+        input:focus, textarea:focus { border-color: #1DBF73; outline: none; }
+    </style>
+</head>
+<body class="noise bg-[#FFEFF4]">
+    <div id="cursor"></div>
+
+    <div class="fixed inset-0 z-[-1] opacity-10 pointer-events-none mix-blend-multiply bg-center bg-cover" 
+         style="background-image: url('towel2222.png');">
+    </div>
+
+    <header class="fixed top-0 left-0 w-full p-8 flex justify-between items-start z-50 mix-blend-difference text-white">
+        <a href="tol.html" class="impact-font text-4xl leading-none tracking-tighter hover:opacity-70 transition-opacity">
+            EMC<br>GROUP
+        </a>
+        <nav class="flex flex-col gap-1 font-black text-lg text-right">
+            <a href="tol3.html" class="hover:text-emerald-400 transition-colors">取扱商品</a>
+            <a href="tol4.html" class="hover:text-emerald-400 transition-colors">新着情報</a>
+            <a href="tol5.html" class="hover:text-emerald-400 transition-colors underline decoration-2 underline-offset-4">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <main class="pt-48">
+        <section class="px-8 mb-32 relative">
+            <div class="marquee impact-font absolute top-0 left-0 -z-10 opacity-5 uppercase select-none">
+                CONTACT CONTACT CONTACT
+            </div>
+            
+            <div class="reveal-box">
+                <p class="text-xl md:text-2xl font-black mb-6 flex items-center gap-4 text-gray-900">
+                    <span class="w-12 h-[3px] bg-black"></span> 理想を、具体的な「形」に。
+                </p>
+                <h2 class="impact-font text-[10vw] md:text-[8rem] leading-none uppercase text-gray-900">
+                    GET IN <span class="text-emerald">TOUCH.</span>
+                </h2>
+            </div>
+        </section>
+
+        <section class="min-h-screen bg-black text-white px-8 py-32 rounded-t-[60px] shadow-[0_-30px_60px_rgba(0,0,0,0.4)] relative z-20">
+            <div class="max-w-4xl mx-auto">
+                <form action="#" class="reveal-box flex flex-col gap-12">
+                    
+                    <div class="flex flex-col gap-4">
+                        <label class="impact-font text-3xl text-emerald">お名前 / NAME</label>
+                        <input type="text" placeholder="EMC 太郎" class="p-6 text-xl font-bold rounded-2xl">
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <label class="impact-font text-3xl text-emerald">会社名 / COMPANY</label>
+                        <input type="text" placeholder="EMC株式会社" class="p-6 text-xl font-bold rounded-2xl">
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <label class="impact-font text-3xl text-emerald">メールアドレス / EMAIL</label>
+                        <input type="email" placeholder="example@emc-group.jp" class="p-6 text-xl font-bold rounded-2xl">
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <label class="impact-font text-3xl text-emerald">内容 / MESSAGE</label>
+                        <textarea rows="6" placeholder="お問い合わせ内容をご記入ください。" class="p-6 text-xl font-bold rounded-2xl"></textarea>
+                    </div>
+
+                    <button type="submit" class="mt-8 py-8 bg-emerald text-black impact-font text-4xl rounded-full hover:scale-105 transition-transform shadow-[0_10px_0px_#0b7a4a]">
+                        SEND MESSAGE
+                    </button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-20 text-center bg-[#FFEFF4] relative z-20">
+        <a href="tol.html" class="impact-font text-3xl hover:opacity-70 transition-opacity text-gray-900">EMC GROUP</a>
+    </footer>
+
+    <script>
+        const cursor = document.querySelector('#cursor');
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, { x: e.clientX - 12, y: e.clientY - 12, duration: 0.2 });
+        });
+
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(".marquee", { x: -1000, scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 2 } });
+        gsap.utils.toArray('.reveal-box').forEach(box => {
+            gsap.from(box, { y: 80, opacity: 0, duration: 1.5, ease: "expo.out", scrollTrigger: { trigger: box, start: "top 85%" } });
+        });
+    </script>
+</body>
+</html>
