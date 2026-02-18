@@ -1,0 +1,69 @@
+/* デザインの共通設定 */
+:root {
+    --emerald: #10b981;
+    --dark: #111827;
+    --cute-pink: #FFEFF4; /* ★ここをかわいいピンクにしました */
+}
+
+/* 全体のスタイル */
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    background-color: var(--cute-pink); /* かわいいピンク背景 */
+    color: var(--dark);
+    overflow-x: hidden;
+    cursor: none; /* 標準のマウスを隠す */
+}
+
+/* 佐久間事務所風：インパクトのある極太フォント */
+.impact-font {
+    font-family: 'Dela Gothic One', cursive;
+    letter-spacing: -0.02em;
+}
+
+/* 質感：うっすら動くノイズ */
+.noise::before {
+    content: "";
+    position: fixed;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: url(https://grainy-gradients.vercel.app/noise.svg);
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 1000;
+    animation: noise-anim 0.2s infinite;
+}
+@keyframes noise-anim {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-1%,-1%) }
+    20% { transform: translate(1%,1%) }
+    100% { transform: translate(0,0) }
+}
+
+/* カッコいい反転カーソル */
+#cursor {
+    width: 24px;
+    height: 24px;
+    background: var(--emerald);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference; /* 重なったところの色が反転！ */
+    transition: transform 0.1s ease-out;
+}
+
+/* 背景を流れる巨大な文字 */
+.marquee {
+    font-size: 25vw;
+    white-space: nowrap;
+    display: flex;
+    color: #fff;
+    line-height: 1;
+    user-select: none;
+    will-change: transform;
+}
+
+/* スマホ用の設定 */
+@media (max-width: 768px) {
+    .marquee { font-size: 40vw; }
+    h1 { font-size: 4rem !important; }
+}
