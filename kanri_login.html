@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin v2 | Login</title>
+  <link rel="stylesheet" href="./kanri.css" />
+</head>
+<body>
+    <header class="topbar">
+  <div class="topbarInner">
+    <a class="brand" href="./kanri_dashboard.html">Admin</a>
+
+    <nav class="nav">
+      <a href="./kanri_dashboard.html">Dashboard</a>
+      <a href="./kanri_users.html">Users</a>
+      <a href="./kanri_content.html">Content</a>
+      <a href="./kanri_roles.html">Roles</a>
+      <a href="./kanri_settings.html">Settings</a>
+    </nav>
+  </div>
+</header>
+
+  <header class="topbar">
+    <div class="topbarInner">
+      <a class="brand" href="./kanri_login.html">
+        <span class="brandMark">EMC GROUP</span>
+        <span class="brandSub">admin v2</span>
+      </a>
+      <span class="pill">make it awesome</span>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="hospitality">HOSPITALITY HOSPITALITY HOSPITALITY</div>
+
+    <section class="hero">
+      <div class="kicker">00 / Sign in</div>
+      <h1 class="heroTitle">管理ログイン</h1>
+      <div class="heroBig">MAKE IT AWESOME.</div>
+
+      <div class="row" style="max-width:520px;margin-top:18px">
+        <input id="email" class="input" placeholder="email" />
+        <input id="password" class="input" placeholder="password" type="password" />
+        <div class="btnRow">
+          <button class="btn" onclick="loginSubmit()">Login</button>
+        </div>
+        <div id="msg" class="small"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./kanri.js"></script>
+</body>
+</html>
