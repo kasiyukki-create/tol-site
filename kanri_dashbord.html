@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin v2 | Dashboard</title>
+  <link rel="stylesheet" href="./kanri.css" />
+</head>
+<body onload="loadDashboard()">
+  <header class="topbar">
+    <div class="topbarInner">
+      <a class="brand" href=".kanri_dashboard.html">
+        <span class="brandMark">EMC GROUP</span>
+        <span class="brandSub">admin v2</span>
+      </a>
+      <nav class="nav">
+        <a href="./kanri_dashbord.html">Dashboard</a>
+        <a href="./knari_users.html">Users</a>
+        <a href="./kanri_content.html">Content</a>
+        <a href="./kanri_roles.html">Roles</a>
+        <a href="./kanri_settings.html">Settings</a>
+      </nav>
+      <button id="logoutBtn" class="btn btnGhost">Logout</button>
+    </div>
+  </header>
+
+  <header class="topbar">
+  <div class="topbarInner">
+    <a class="brand" href="./kanri_dashboard.html">Admin</a>
+
+    <nav class="nav">
+      <a href="./kanri_dashboard.html">Dashboard</a>
+      <a href="./kanri_users.html">Users</a>
+      <a href="./kanri_content.html">Content</a>
+      <a href="./kanri_roles.html">Roles</a>
+      <a href="./kanri_settings.html">Settings</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="main">
+    <div class="hospitality">HOSPITALITY HOSPITALITY HOSPITALITY</div>
+    <section class="hero">
+      <div class="kicker">01 / Dashboard</div>
+      <h1 class="heroTitle">今どうなってるか一瞬で分かる</h1>
+      <div class="heroBig">MAKE IT AWESOME.</div>
+      <div id="dashMsg" class="small"></div>
+    </section>
+
+    <div class="grid3">
+      <div class="card">
+        <div class="cardLabel">投稿数</div>
+        <div class="cardValue" id="postCount">-</div>
+      </div>
+      <div class="card">
+        <div class="cardLabel">ユーザー数</div>
+        <div class="cardValue" id="userCount">-</div>
+      </div>
+      <div class="card">
+        <div class="cardLabel">最終更新日</div>
+        <div class="cardValue" style="font-size:18px;margin-top:12px" id="lastUpdated">-</div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./kanri.js"></script>
+</body>
+</html>
